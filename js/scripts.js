@@ -35,7 +35,6 @@ let pokemonRepository = (function () {
 
 document.write(pokemonRepository.getAll());
 
-function myLoop(pokemon) {
+pokemonList.forEach(function(pokemon){
     document.write(pokemon.name + ': ' + pokemon.height + '<br>' + 'type: ' + pokemon.types + '<br><br>');
-};
-pokemonRepository.forEach(myLoop);
+  });
