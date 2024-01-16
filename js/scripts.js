@@ -33,8 +33,8 @@ let pokemonRepository = (function () {
 
 })();
 
-document.write(pokemonRepository.getAll());
 
-pokemonList.forEach(function(pokemon){
+
+pokemonRepository.getAll().forEach(function(pokemon){
     document.write(pokemon.name + ': ' + pokemon.height + '<br>' + 'type: ' + pokemon.types + '<br><br>');
   });
