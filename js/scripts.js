@@ -33,7 +33,7 @@ let pokemonRepository = (function () {
 
   function openModal(pokemon) {
     // Clears pre-existing modal content
-    modalContainer = innerHTML = '';
+    modalContainer. innerHTML = '';
   }
 
   let modal = document.createElement('div');
@@ -60,10 +60,14 @@ let pokemonRepository = (function () {
   modal.appendChild(closeButtonElement);
   modal.appendChild(titleElement);
   modal.appendChild(contentElement);
-  modalConatainer.appendChild(modal);
+  modalContainer.appendChild(modal);
 
-  modal.Container.classList.add('is-visible');
+  modalContainer.classList.add('is-visible');
 
+  function hideModal() {
+    modalContainer.classList.remove('is-visible');
+  }
+  
   window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
     hideModal();
