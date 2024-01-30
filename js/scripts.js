@@ -40,9 +40,13 @@ let pokemonRepository = (function () {
       return response.json();
     })
     .then(function (details) {
+      //Pokemon details//
       item.imageUrl = details.sprites.front_default;
+      item.imageUrlBack = details.sprites.back_default;
       item.height = details.height;
+      item.weight = details.weight;
       item.types = details.types;
+      item.abilities = details.abilites;
     })
     .catch(function (e) {
       console.error(e);
