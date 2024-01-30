@@ -21,11 +21,14 @@ let pokemonRepository = (function () {
       pokemonList.appendChild('li');
       
       let button = document.createElement('button');
-      
       button.innerText = pokemon.name;
-      button.classList.add('button-class');
       listItem.appendChild(button);
+      button.classList.add('btn', 'btn-secondary');
+      button.setAttribute('data-target', '#exampleModal');
+      button.setAttribute('data-toggle', 'modal');
       pokemonList.appendChild(listItem);
+      addEventListenerToButton(button, pokemon)
+
       button.addEventListener('click', function (event){
           showDetails(pokemon);
       });
